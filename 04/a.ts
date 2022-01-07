@@ -16,7 +16,7 @@ export const bingoWinner = async (): Promise<number> => {
     while(winner === undefined) {
         game.boards.forEach(board => {
             board.markNumber(game.plays[play]);
-            if(board.wonWih !== undefined) {
+            if(board.wonWith !== undefined) {
                 winner = board;
             }
         });

@@ -2,7 +2,7 @@
 export class Board {
     board: number[][];
     markedNumbers: Set<number>;
-    wonWih: number | undefined;
+    wonWith: number | undefined;
 
     constructor(board: number[][]) {
         this.markedNumbers = new Set<number>();
@@ -12,7 +12,7 @@ export class Board {
     markNumber(number: number) {
         this.markedNumbers.add(number);
         if (this.won())
-            this.wonWih = number;
+            this.wonWith = number;
     }
 
     won(): boolean {
@@ -59,6 +59,6 @@ export class Board {
             }
         }
 
-        return sum * this.wonWih!;
+        return sum * this.wonWith!;
     }
 }
